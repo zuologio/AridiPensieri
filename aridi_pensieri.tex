@@ -1,0 +1,97 @@
+\documentclass[12pt]{book}
+
+% ---------- PACCHETTI ----------
+\usepackage[paperwidth=4.25in, paperheight=7in,
+            inner=0.8in, outer=0.6in,
+            top=0.7in, bottom=0.7in]{geometry}
+
+\usepackage{fontspec}      % Per XeLaTeX
+\usepackage{microtype}     % Migliore tipografia
+\usepackage{setspace}      % Per gestire interlinea
+\usepackage{titling}       % Per personalizzare frontespizio
+\usepackage{verse}         % Per poesie
+\usepackage{lipsum}        % (solo debug, puoi rimuoverlo)
+\usepackage{fancyhdr}      % Per footer e header
+\usepackage{emptypage}     % Evita numerazione su pagine vuote
+
+% ---------- FONT ----------
+\setmainfont{Cormorant Garamond}
+%\setmainfont{EB Garamond}
+%\setmainfont{Crimson Pro}
+
+\linespread{1.15}
+
+% ---------- HEADER/FOOTER ----------
+\pagestyle{plain}
+
+% ---------- FRONTESPIZIO ----------
+\title{\Huge Aridi Pensieri}
+\author{\Large \emph{Raccolta di poesie}}
+\date{}
+
+% ---------- INIZIO DOCUMENTO ----------
+\begin{document}
+
+% ---------- PAGINA DEL TITOLO ----------
+\maketitle
+\thispagestyle{empty}
+\clearpage
+
+% ---------- PAGINA DELLA DEDICA ----------
+\cleardoublepage
+\thispagestyle{empty}
+
+\vspace*{0.55\textheight}
+
+\begin{flushright}
+\itshape
+A Sara,\\
+per questa vita insieme
+\end{flushright}
+
+\clearpage
+
+% ---------- NOTA DELL'AUTORE ----------
+\cleardoublepage
+\chapter*{Nota dell'autore}
+\addcontentsline{toc}{chapter}{Nota dell'autore}
+
+% (INCOLLA QUI IL TESTO DELLA NOTA)
+% Usa paragrafi normali: LaTeX gestisce tutto
+% -----------------------------------------
+% Esempio:
+% Sono cresciuto in mezzo ai campi...
+% -----------------------------------------
+
+\clearpage
+
+% ---------- INIZIO RACCOLTA ----------
+\cleardoublepage
+\chapter*{Poesie}
+\addcontentsline{toc}{chapter}{Poesie}
+
+% ----- MODELLO PER OGNI POESIA -----
+%
+%   \cleardoublepage
+%   \section*{Titolo}
+%   \begin{verse}
+%   Testo poesia...
+%   \end{verse}
+%
+% Questo garantisce che ogni poesia inizi sempre su pagina dispari.
+%
+
+% ---------- ESEMPIO ----------
+%\cleardoublepage
+%\section*{Aridi Pensieri}
+%\begin{verse}
+%Come aratro\\
+%imprimo solchi\\
+%nella mente\\
+%...
+%\end{verse}
+
+% ---------- FINE LIBRO ----------
+\cleardoublepage
+
+\end{document}
